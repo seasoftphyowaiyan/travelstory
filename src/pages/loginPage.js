@@ -19,7 +19,27 @@ class LoginPage extends React.Component {
     login = (event) => {
         event.preventDefault();
 
-        // const { email, password } = this.state;
+        const { email, password } = this.state;
+        fetch(
+                "https://travelstory-ticket.herokuapp.com/api/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json",
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        password: password
+                    }),
+                }
+            )
+            .then(res => res.json())
+            .then(res => {
+                localStorage.setItem("user", JSON.stringify(res.user._id));
+                localStorage.setItem("token", res.token);
+                console.log(res);
+                window.location.href = "/admin/dashboard";
+            })
         
     };
     render() {
