@@ -19,7 +19,7 @@ class LoginPage extends React.Component {
     login = (event) => {
         event.preventDefault();
 
-        const { email, password } = this.state;
+        // const { email, password } = this.state;
         
     };
     render() {
