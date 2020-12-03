@@ -1,0 +1,36 @@
+.form-control {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+}
+.form-control:focus {
+  border-color: transparent !important;
+  box-shadow: none;
+}
+.form-control:focus + .focus::before {
+  width: 100%;
+}
+span.focus:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: -webkit-linear-gradient(left, #08a8e2, #00c9c1, #00e648);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+label {
+  margin-bottom: 0;
+}
+input.showpassword,
+input.showconfirmpassword {
+  position: absolute;
+  bottom: 13px;
+  right: 0;
+}
