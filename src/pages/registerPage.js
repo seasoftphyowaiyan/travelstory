@@ -1,15 +1,16 @@
 import React from 'react';
+import logo from '../assets/img/travelstorylogo.png';
+import '../assets/css/login-register.css';
 import { Link } from 'react-router-dom';
 
 const RegisterPage = () => {
     return (
         <div style={{backgroundColor: '#1a232f',
-    backgroundImage: '-moz-radial-gradient(center center, circle cover, #273648, #0d1218 100%)',
-    backgroundImage: '-webkit-radial-gradient(center center, circle cover, #273648, #0d1218 100%)', height: '100vh'}}>
+    backgroundImage: 'radial-gradient(center center, circle cover, #273648, #0d1218 100%)', height: '100vh'}}>
             <div className="container login-register">
                 <div className="row">
                     <div className="col-md-12 text-center mt-5">
-                        <img src="/img/travelstorylogo.png" className="img-fluid" alt=""/>
+                        <img src={logo} className="img-fluid" alt=""/>
                         <h1 className="text-center my-5 text-white">Welcome to Travel Story!</h1>
                     </div>
                     <div className="col-md-5 bg-white m-auto p-5 rounded">

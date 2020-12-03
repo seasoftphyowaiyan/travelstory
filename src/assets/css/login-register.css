@@ -1,17 +1,17 @@
-.form-control {
+.login-register .form-control {
   border: none;
   outline: none;
   border-bottom: 1px solid #ddd;
   border-radius: 0;
 }
-.form-control:focus {
+.login-register .form-control:focus {
   border-color: transparent !important;
   box-shadow: none;
 }
 .form-control:focus + .focus::before {
   width: 100%;
 }
-span.focus:before {
+.login-register span.focus:before {
   content: "";
   display: block;
   position: absolute;
@@ -25,11 +25,11 @@ span.focus:before {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
-label {
+.login-register label {
   margin-bottom: 0;
 }
-input.showpassword,
-input.showconfirmpassword {
+.login-register input.showpassword,
+.login-register input.showconfirmpassword {
   position: absolute;
   bottom: 13px;
   right: 0;
